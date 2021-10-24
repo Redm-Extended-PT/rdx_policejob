@@ -30,9 +30,9 @@ local blips = {
 -------------------------------------------------------------
 Citizen.CreateThread(function()
     local checkbox2 = false
-    WarMenu.CreateMenu('perso', "Police")
-    WarMenu.SetSubTitle('perso', 'Police Menu')
-    WarMenu.CreateSubMenu('inv', 'perso', 'Police Horse')
+    WarMenu.CreateMenu('perso', "Sheriff")
+    WarMenu.SetSubTitle('perso', 'Sheriff Menu')
+    WarMenu.CreateSubMenu('inv', 'perso', 'Sheriff Horse')
     WarMenu.CreateSubMenu('inv1', 'perso', 'Your Options')
 
     while true do
@@ -44,16 +44,16 @@ Citizen.CreateThread(function()
 
             
 
-            if WarMenu.MenuButton('Police Options', 'inv1') then
+            if WarMenu.MenuButton('Sheriff Options', 'inv1') then
             end
 			
-			if WarMenu.MenuButton('Police Horse', 'inv') then 
+			if WarMenu.MenuButton('Sheriff Horse', 'inv') then 
             end
 
             WarMenu.Display()
         elseif WarMenu.IsMenuOpened('inv1') then
 			
-			if WarMenu.Button('Police Badge') then
+			if WarMenu.Button('Sheriff Badge') then
                    Citizen.InvokeNative(0xD3A7B003ED343FD9 , PlayerPedId(),  0x1FC12C9C, true, true, true)
 					
 			 elseif WarMenu.Button('Cuff') then 
@@ -84,7 +84,7 @@ Citizen.CreateThread(function()
             WarMenu.Display()
         elseif WarMenu.IsMenuOpened('inv') then   
 
-            if WarMenu.Button('Police Horse') then
+            if WarMenu.Button('Sheriff Horse') then
 					SpawnHorse()
             end
             WarMenu.Display()
@@ -99,10 +99,10 @@ end)
 -- pd station
 Citizen.CreateThread(function()
     local checkbox2 = false
-    WarMenu.CreateMenu('perso2', "Police")
-    WarMenu.SetSubTitle('perso2', 'Police Menu')
-    WarMenu.CreateSubMenu('inv3', 'perso2', 'Police clothing')
-    WarMenu.CreateSubMenu('inv4', 'perso2', 'Police Weapons')
+    WarMenu.CreateMenu('perso2', "Sheriff")
+    WarMenu.SetSubTitle('perso2', 'Sheriff Menu')
+    WarMenu.CreateSubMenu('inv3', 'perso2', 'Sheriff clothing')
+    WarMenu.CreateSubMenu('inv4', 'perso2', 'Sheriff Weapons')
 	WarMenu.CreateSubMenu('TP', 'perso2', 'Teleport')
 
     while true do
@@ -114,10 +114,10 @@ Citizen.CreateThread(function()
 
             
 
-            if WarMenu.MenuButton('Police Options', 'inv3') then
+            if WarMenu.MenuButton('Sheriff Options', 'inv3') then
             end
 
-            if WarMenu.MenuButton('Police Weapons', 'inv4') then
+            if WarMenu.MenuButton('Sheriff Weapons', 'inv4') then
             end
 			
 			if WarMenu.MenuButton('Teleport', 'TP') then
@@ -144,7 +144,7 @@ Citizen.CreateThread(function()
         elseif WarMenu.IsMenuOpened('inv3') then
 
 
-			if WarMenu.Button('put on Police Badge') then
+			if WarMenu.Button('put on Sheriff Badge') then
                     Citizen.InvokeNative(0xD3A7B003ED343FD9 , PlayerPedId(),  0x1FC12C9C, true, true, true)	
 				
             elseif WarMenu.Button('on duty Blackwater ped') then
