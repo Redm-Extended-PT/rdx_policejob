@@ -19,3 +19,5 @@ A Sheriff Job for rdx_core
 [rdx_society](https://github.com/Redm-Extended-PT/rdx_society)
 
 [rdx_skin](https://github.com/Redm-Extended-PT/rdx_skin)
+
+[warmenu](https://github.com/RalivTV/warmenu)
